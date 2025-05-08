@@ -1,0 +1,18 @@
+server:
+  port: 8543  # \u670D\u52A1\u5668\u7AEF\u53E3\u914D\u7F6E
+
+neo4j:
+  uri: neo4j://10.230.1.204:7688
+  username: neo4j
+  password: Comac@1234
+  database: neo4j
+
+# Using spring-ai-starter-mcp-server-webflux
+spring:
+  ai:
+    mcp:
+      server:
+        name: neo4j-sse
+        version: 1.0.0
+        type: ASYNC  # Recommended for reactive applications
+        sse-message-endpoint: /mcp/messages
