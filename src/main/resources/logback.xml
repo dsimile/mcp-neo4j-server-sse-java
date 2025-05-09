@@ -5,16 +5,18 @@
         </encoder>
     </appender>
 
+    <property name="LOG_PATH" value="${log.path:-.}/logs" />
+
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./logs/mcp-neo4j-sse.log</file>
+        <file>${LOG_PATH}/mcp-neo4j-sse.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- Split logs by day -->
-            <fileNamePattern>./logs/mcp-neo4j-sse.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/mcp-neo4j-sse.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- Logs are kept for 14 days -->
             <maxHistory>14</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%d{yyyy-mm-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 

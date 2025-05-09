@@ -2,9 +2,9 @@ server:
   port: 8543
 
 neo4j:
-  uri: neo4j://localhost:7688
+  uri: neo4j://localhost:7687
   username: neo4j
-  password: neo4j
+  password: neo4j123
   database: neo4j
 
 # Using spring-ai-starter-mcp-server-webflux
@@ -12,7 +12,8 @@ spring:
   ai:
     mcp:
       server:
+        enabled: true     # Enable/disable the MCP server
+        stdio: false      # Enable/disable stdio transport
         name: neo4j-sse
         version: 1.0.0
         type: ASYNC  # Recommended for reactive applications
-        sse-message-endpoint: /mcp/messages

@@ -16,10 +16,11 @@
     </parent>
 
     <properties>
+        <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mcp-server-webflux.version>1.0.0-M6</mcp-server-webflux.version>
+        <spring-ai.version>1.0.0-M6</spring-ai.version>
         <neo4j-java-driver.version>5.28.5</neo4j-java-driver.version>
     </properties>
 
@@ -28,7 +29,7 @@
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-mcp-server-webflux-spring-boot-starter</artifactId>
-            <version>${mcp-server-webflux.version}</version>
+            <version>${spring-ai.version}</version>
         </dependency>
 
         <dependency>
