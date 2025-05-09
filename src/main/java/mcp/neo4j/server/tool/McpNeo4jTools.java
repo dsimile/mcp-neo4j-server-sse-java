@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class McpNeo4jTools {
 
     @Bean
-    public ToolCallbackProvider weatherTools(Neo4jService neo4jService) {
+    public ToolCallbackProvider neo4jTools(Neo4jService neo4jService) {
         return MethodToolCallbackProvider.builder().toolObjects(neo4jService).build();
     }
 }
