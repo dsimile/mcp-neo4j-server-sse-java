@@ -87,6 +87,7 @@ java -Dspring.ai.mcp.server.stdio=true \
      -Dneo4j.username=neo4j \
      -Dneo4j.password=<your password> \
      -Dneo4j.database=<your database> \
+     -Dlog.path=/absolute/path/to/ \
      -jar target/mcp-neo4j-server-sse-java-1.0-SNAPSHOT.jar
 ```
 
